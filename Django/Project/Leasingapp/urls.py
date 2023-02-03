@@ -1,0 +1,32 @@
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.adminlogin),
+    path('Front', views.adminlogin),
+    path('About', views.aboutpage),
+    path('Help', views.helppage),
+    path('Contact', views.contactpage),
+    path('admin', views.admin),
+    path('Lesse', views.reglessee),
+    path('Lessor', views.reglessor),
+    path('lessorview', views.lessorview),
+    path('pending', views.result),
+    path('pendinglessor', views.result1),
+    path('approve/<int:id>/', views.approve),
+    path('approvelor/<int:id>/', views.approve1),
+    path('approved', views.approved),
+    path('approvedlessor', views.approved1),
+    path('Add', views.upload),
+    path('addpending', views.addpen),
+    path('addapprove/<int:id>/', views.addapprove),
+    path('addapproved', views.addapproved),
+    path('View', views.imageview),
+    path('Register', views.lesseregister),
+    path('regpending', views.regpen),
+    path('regapprove/<int:id>/', views.regapprove),
+    path('regapproved', views.approvedreg),
+    path('Operation', views.operations),
+    path('edit/<int:id>/', views.edit),
+    path('delete/<int:id>/', views.delete),
+]

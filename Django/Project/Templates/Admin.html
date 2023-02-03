@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Page</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    h2{
+        text-align: center;
+        padding-top: 30px;
+    }
+    table{
+        font-weight: bold;
+        font-size: 18px;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 400px;
+        background: linear-gradient(120deg, red, #8e44ad);
+        border-radius: 10px;
+        overflow: hidden;
+    }
+     th,td{
+        padding: 10px 15px;
+    }
+    th{
+        background: violet;
+        color: black;
+        text-transform: uppercase;
+        font-family: Georgia;
+    }
+#fix{
+        width: 100%;
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        }
+</style>
+{% load static %}
+<body id="fix" style="background-image: url('{% static 'Pic/view.jpg' %}');">
+<h2>Welcome Admin</h2>
+    <table>
+        <tr>
+            <td>
+                <label>Lessee Pending form--></label>
+            </td>
+            <td>
+                <a href="pending">Lessee Pending</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Lessor Pending Form--></label>
+            </td>
+            <td>
+                <a href="pendinglessor">Lessor Pending</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Adding a product form--></label>
+            </td>
+            <td>
+                <a href="addpending">Add Pending</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Buying Lessee Register--></label>
+            </td>
+            <td>
+                <a href="regpending">Register Pending</a>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

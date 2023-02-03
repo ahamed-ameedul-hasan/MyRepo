@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome Lessor</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    h2{
+        text-align: center;
+        padding-top: 80px;
+    }
+    table{
+        font-weight: bold;
+        font-size: 18px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 400px;
+        background: linear-gradient(120deg, red, #8e44ad);
+        border-radius: 10px;
+        overflow: hidden;
+    }
+     th,td{
+        padding: 10px 15px;
+    }
+    td{
+        padding: 15px 20px;
+    }
+    td input{
+        padding: 8px;
+    }
+
+    th{
+        background: violet;
+        color: black;
+        text-transform: uppercase;
+        font-family: Georgia;
+    }
+    table td a{
+        text-decoration: none;
+        color: orange;
+    }
+#fix{
+        width: 100%;
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        }
+</style>
+{% load static %}
+<body id="fix" style="background-image: url('{% static 'Pic/view.jpg' %}');">
+<table>
+    <h2>Welcome Lessor</h2>
+    <tr>
+        <td>
+            <label>Adding an product</label>
+        </td>
+        <td>
+            <a href="Add">Add</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label>Edit or delete an product</label>
+        </td>
+        <td>
+            <a href="Operation">Edit or Delete</a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

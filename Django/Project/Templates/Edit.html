@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit and Delete</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    h2{
+        text-align: center;
+        padding-top: 20px;
+    }
+    .first{
+        position: absolute;
+        z-index: 2;
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%, -50%);
+        width: 60%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        text-align: center;
+        overflow: hidden;
+    }
+    .first th,td{
+        padding: 10px 15px;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .first th{
+        background: violet;
+        color: black;
+        text-transform: uppercase;
+        font-family: Georgia;
+    }
+    .first td{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans';
+        background-color: none;
+        color: black;
+        }
+    .second{
+        position: absolute;
+        z-index: 2;
+        left: 50%;
+        top: 100%;
+        transform: translate(-50%, -50%);
+        width: 10%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        text-align: center;
+        overflow: hidden;
+    }
+    .second{
+        font-weight: bold;
+        font-size: 18px;
+        position: absolute;
+        top: 150%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 400px;
+        background: linear-gradient(120deg, red, #8e44ad);
+        border-radius: 10px;
+        overflow: hidden;
+    }
+     .second th,td{
+        padding: 10px 15px;
+    }
+    .second th{
+        background: violet;
+        color: black;
+        text-transform: uppercase;
+        font-family: Georgia;
+    }
+    .submit:hover{
+        cursor: pointer;
+    }
+    table td a{
+        text-decoration: none;
+        color: red;
+    }
+
+    #fix{
+        width: 100%;
+        height: 200vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        }
+</style>
+<script>
+    function down(){
+        alert("Scroll down please")
+    }
+    function update(){
+        alert("Updated")
+    }
+</script>
+{% load static %}
+<body id="fix" style="background-image: url('{% static 'Pic/view.jpg' %}');">
+<h2>Edit or Delete</h2>
+    <table class="first">
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Image</th>
+            <th>Action</th>
+        </tr>
+        {% for i in value %}
+            <tr>
+                <td>{{i.Name}}</td>
+                <td>{{i.Description}}</td>
+                <td>{{i.Price}}</td>
+                <td>
+                    <img src="{{i.Picture.url}}" alt="{{i.Picture}}" width="250px" height="150px">
+                </td>
+                <td>
+                    <a href="/edit/{{i.id}}" onclick="down()">Edit</a>
+                    <a href="/delete/{{i.id}}">Delete</a>
+                </td>
+
+            </tr>
+        {% endfor %}
+    </table>
+<br><br><br>
+  {% if a %}
+<form method="post" enctype="multipart/form-data">
+   {% csrf_token %}
+    <table class="second">
+
+        <tr>
+            <td>
+                <label>Name</label>
+            </td>
+            <td>
+                <input type="text" name="name" value="{{a.Name}}">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Description</label>
+            </td>
+            <td>
+                <input type="text" name="desc" value="{{a.Description}}">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Price</label>
+            </td>
+            <td>
+                <input type="text" name="price" value="{{a.Price}}">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Image</label>
+            </td>
+            <td>
+                <input type="file" name="picture" value="{{a.Picture}}">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class="submit" onclick="update()" type="submit" value="Update">
+            </td>
+        </tr>
+    </table>
+    </form>
+{% endif %}
+
+</body>
+</html>

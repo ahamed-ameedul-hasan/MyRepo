@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About the project</title>
+</head>
+<style>
+    *{
+       margin: 0;
+       padding: 0;
+   }
+   .main{
+        width: 100%;
+
+        background-position: center;
+        background-size: cover;
+        height: 109vh;
+   }
+   .navbar{
+        width: 1200px;
+        height: 75px;
+        margin: auto;
+   }
+   .icon{
+        width: 200px;
+        float: left;
+        height: 70px;
+   }
+   .logo{
+        color: orange;
+        font-size: 30px;
+        font-family: Arial;
+        padding-left: 20px;
+        float: left;
+        padding-top: 10px;
+   }
+    .menu{
+        width: 400px;
+        float: right;
+        height: 70px;
+        padding-right: 110px;
+
+   }
+   ul{
+        float: left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+   }
+   ul li{
+        list-style: none;
+        margin-left: 62px;
+        margin-top: 27px;
+        font-size: 15px;
+   }
+   ul li a{
+        text-decoration: none;
+        color: black;
+        font-family: Arial;
+        font-weight: bold;
+        transition: 0.4s;
+    }
+    ul li a:hover{
+        color: red;
+   }
+
+    .content{
+        font-family: 'Times New Roman';
+        float: left;
+        font-size: 17px;
+        font-style: italic;
+        color: black;
+        padding-left: 20px;
+        padding-top: 50px;
+        padding-right: 350px;
+  }
+  #fix{
+        width: 100%;
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        }
+</style>
+{% load static %}
+<body id="fix" style="background-image: url('{% static 'Pic/natures.jpg' %}');">
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">Equipment Leasing</h2>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href='Front'>HOME</a></li>
+                    <li><a href='About'>ABOUT</a></li>
+                    <li><a href='Help'>HELP & SUPPORT</a></li>
+                    <li><a href='Contact'>CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="content">
+                <h4><p>Equipment Leasing Management is a highly complicated issue due the high volatile of
+                    container demand and supply.<br> Shipping Container is not a direct demand at all, but a derived
+                    demand of the international trade in industry.<br> Therefore containers are faced with a
+                    demand to strike a balance between the demands and supply. <br> The Present Equipment
+                    Leasing Management solutions are reactive rather than proactive. <br>The need for an effective
+
+                    Equipment Leasing Management comes in to play under such market conditions. <br> ‘Container’
+                    means, an article of transport equipment of a permanent character and accordingly
+                    strong enough to be suitable for repeated use or any type of container, transportable
+                    tank or flat, swap body, open top , dry wan , or any similar unit load used to consolidate goods,
+                    and any equipment ancillary to such unit load. Container ships and containers are
+                    supplementary to each other thus Container Shipping Lines cannot transport cargo if containers
+                    are not available. <br> In order to fulfill the demand and satisfy the lessee to lease the container in
+                    the efficient way this application is developed. Generally, container shipping companies
+                    reposition empty containers from surplus ports to deficit ports. <br> As a result, obviously, there is
+                    a cost involved in balancing the container fleet by respective shipping lines. <br> The available
+                    containers are uploaded to this application by the lessor (owner), and he specifies all the details
+                    like container history, container type, and container id and container rate per year. <br> A truck
+                    trailer body that can be detached from the chassis for loading into a vessel, a rail car or stacked
+                    in a container depot. Containers may be ventilated, insulated, refrigerated, flat rack, vehicle
+                    rack, open top, bulk liquid or equipped with interior devices.</p></h4>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

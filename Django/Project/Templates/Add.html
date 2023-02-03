@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    h2{
+        text-align: center;
+        padding-top: 20px;
+    }
+    table{
+        font-weight: bold;
+        font-size: 18px;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 400px;
+        background: linear-gradient(120deg, red, #8e44ad);
+        border-radius: 10px;
+        overflow: hidden;
+    }
+     th,td{
+        padding: 10px 15px;
+    }
+    td{
+        padding: 15px 20px;
+    }
+    td input{
+        padding: 8px;
+    }
+
+    th{
+        background: violet;
+        color: black;
+        text-transform: uppercase;
+        font-family: Georgia;
+    }
+    .upload:hover{
+        cursor: pointer;
+        background-color: red;
+
+    }
+    #fix{
+        width: 100%;
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        }
+</style>
+<script>
+    function add(){
+        alert("Added Successfully")
+        alert("Wait for admin approval")
+    }
+</script>
+{% load static %}
+<body id="fix" style="background-image: url('{% static 'Pic/view.jpg' %}');">
+
+        <h2>Upload Here</h2>
+        <form id="upload" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+         <table>
+             <tr>
+                <td>
+                    <label >Container Name: </label>
+                </td>
+                <td>
+                    <input type="text" name="name" placeholder="Enter your container name">
+                </td>
+            </tr>
+             <tr>
+                 <td>
+                    <label>Container Description</label>
+                </td>
+                 <td>
+                    <input type="text" name="des" placeholder="Enter the container description" size="60">
+                 </td>
+            </tr>
+             <tr>
+                 <td>
+                    <label>Container Price</label>
+                 </td>
+                 <td>
+                    <input type="text" name="price" placeholder="Rs.">
+                 </td>
+             </tr>
+             <tr>
+                 <td>
+                    <label>Container Picture</label>
+                 </td>
+                 <td>
+                    <input type="file" name="picture">
+                 </td>
+            </tr>
+             <tr>
+                <td>
+                    <td>
+                        <input type="submit" onclick="add()" value="Upload" name="upload" class="upload">
+                    </td>
+                </td>
+             </tr>
+         </table>
+        </form>
+
+</body>
+</html>

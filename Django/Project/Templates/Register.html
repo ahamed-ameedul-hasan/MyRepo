@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+</head>
+<style>
+     *{
+        margin: 0;
+        padding: 0;
+    }
+    h2{
+        text-align: center;
+        padding-top: 20px;
+    }
+    table{
+        font-weight: bold;
+        font-size: 18px;
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 400px;
+        background: linear-gradient(120deg, red, #8e44ad);
+        border-radius: 10px;
+        overflow: hidden;
+    }
+     th,td{
+        padding: 10px 15px;
+    }
+    td{
+        padding: 15px 20px;
+    }
+    td input{
+        padding: 8px;
+    }
+
+    th{
+        background: violet;
+        color: black;
+        text-transform: uppercase;
+        font-family: Georgia;
+    }
+    .lease{
+        cursor: pointer;
+    }
+    .lease:hover{
+        background-color: violet;
+        color: black;
+    }
+#fix{
+        width: 100%;
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        }
+</style>
+<script>
+    function lease(){
+        alert("Your order has been placed successfully it will be delivered in 10 days");
+        alert("Now you can close the tab");
+    }
+</script>
+
+{% load static %}
+<body id="fix" style="background-image: url('{% static 'Pic/view.jpg' %}');">
+
+<h2>Register Here To Buy</h2>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table>
+        <tr>
+            <td>
+                <label>Name</label>
+            </td>
+            <td>
+                <input type="text" name="name" placeholder="Enter your Name">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Delivery Address</label>
+            </td>
+            <td>
+                <input type="text" name="dev" placeholder="Enter your Address" size="60">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>How many days did you want to take lease?</label>
+            </td>
+            <td>
+                <select name="days" >
+                    <option value="0"></option>
+                    <option value="1">5 days</option>
+                    <option value="2">10 days</option>
+                    <option value="3">15 days</option>
+                    <option value="4">20 days</option>
+                    <option value="5">25 days</option>
+                    <option value="6">30 days</option>
+                    <option value="7">2 month</option>
+                    <option value="8">3 month</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Mobile Number</label>
+            </td>
+            <td>
+                <input type="number" name="number" placeholder="Enter your number">\
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Email</label>
+            </td>
+            <td>
+                <input type="email" name="mail" placeholder="Enter your mail address">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Aadhar Card Number</label>
+            </td>
+            <td>
+                <input type="number" name="aadhar" placeholder="Aadhar number">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <td>
+                    <input type="submit" class="lease" value="Take lease" onclick="lease()">
+                </td>
+            </td>
+        </tr>
+</table>
+            </form>
+        </div>
+       </div>
+</body>
+</html>

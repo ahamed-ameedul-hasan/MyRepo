@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Help And Support</title>
+</head>
+<style>
+     *{
+       margin: 0;
+       padding: 0;
+   }
+   .main{
+        width: 100%;
+
+        background-position: center;
+        background-size: cover;
+        height: 109vh;
+   }
+   .navbar{
+        width: 1200px;
+        height: 75px;
+        margin: auto;
+   }
+   .icon{
+        width: 200px;
+        float: left;
+        height: 70px;
+   }
+   .logo{
+        color: orange;
+        font-size: 30px;
+        font-family: Arial;
+        padding-left: 20px;
+        float: left;
+        padding-top: 10px;
+   }
+   .menu{
+        width: 400px;
+        float: right;
+        height: 70px;
+        padding-right: 110px;
+   }
+   ul{
+        float: left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+   }
+   ul li{
+        list-style: none;
+        margin-left: 62px;
+        margin-top: 27px;
+        font-size: 15px;
+   }
+   ul li a{
+        text-decoration: none;
+        color: black;
+        font-family: Arial;
+        font-weight: bold;
+        transition: 0.4s;
+    }
+    ul li a:hover{
+        transform: scale(1.2);
+    }
+   ul li a:hover{
+        color: red;
+   }
+   .fa{
+        font-size: 25px;
+        text-align: center;
+        float: left;
+        padding-top: 90px;
+        padding-right: 155px;
+        padding-left: 560px;
+
+   }
+   span{
+        color: red;
+   }
+   .cus{
+        text-align: center;
+        float: left;
+        padding-top: 50px;
+        padding-right: 155px;
+        padding-left: 20px;
+        background-color: #f9004d;
+        color: white;
+        text-decoration: none;
+        border: 2px solid transparent;
+        font-weight: bold;
+        padding: 20px 20px;
+        border-radius: 30px;
+   }
+   .outside{
+          padding-top: 300px;
+          padding-left: 30px;
+   }
+   .charge{
+        text-align: center;
+        float: left;
+        padding-top: 50px;
+        padding-right: 155px;
+        padding-left: 20px;
+        background-color: #f9004d;
+        color: white;
+        text-decoration: none;
+        border: 2px solid transparent;
+        font-weight: bold;
+        padding: 20px 20px;
+        border-radius: 30px;
+}
+.out{
+     padding-left: 410px;
+}
+.hours{
+     text-align: center;
+        float: left;
+        padding-top: 50px;
+        padding-right: 155px;
+        padding-left: 20px;
+        background-color: #f9004d;
+        color: white;
+        text-decoration: none;
+        border: 2px solid transparent;
+        font-weight: bold;
+        padding: 20px 20px;
+        border-radius: 30px;
+}
+.outs{
+     padding-left: 850px;
+
+}
+.location{
+     text-align: center;
+        float: left;
+        padding-top: 50px;
+        padding-right: 155px;
+        padding-left: 20px;
+        background-color: #f9004d;
+        color: white;
+        text-decoration: none;
+        border: 2px solid transparent;
+        font-weight: bold;
+        padding: 20px 20px;
+        border-radius: 30px;
+}
+.outsid{
+     padding-top:155px;
+     padding-left: 435px;
+}
+#fix{
+        width: 100%;
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        }
+
+</style>
+{% load static %}
+<body id="fix" style="background-image: url('{% static 'Pic/natures.jpg' %}');">
+    <body>
+        <div class="main">
+            <div class="navbar">
+                <div class="icon">
+                    <h2 class="logo">Equipment Leasing</h2>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href='Front'>HOME</a></li>
+                        <li><a href='About'>ABOUT</a></li>
+                        <li><a href='Help'>HELP & SUPPORT</a></li>
+                        <li><a href='Contact'>CONTACT</a></li>
+                    </ul>
+                </div>
+
+                    <div class="fa">
+                         <h2>FAQ<span>'s</span></h2>
+                    </div>
+                    <div class="outside">
+                         <div class="cus">
+                              <h3>What is the customer care number?</h3>
+                              <br><br>
+                              <p>044-123456789</p>
+                         </div>
+                    </div>
+                    <div class="out">
+                         <div class="charge">
+                              <h3>Do you charge for delivery?</h3>
+                              <br>
+                              <p>Delivery fee varies from city to city and is applicable <br> if order value is below a certain amount</p>
+                         </div>
+                    </div>
+                    <div class="outs">
+                         <div class="hours">
+                              <h3>What are your delivery hours?</h3>
+                              <br>
+                              <p>Our delivery hours vary for different locations</p>
+                         </div>
+                    </div>
+                    <div class="outsid">
+                         <div class="location">
+                              <h3>Can I order from any location?</h3>
+                              <br>
+                              <p>We will deliver from any location but it takes <br> some time or days to deliver your order</p>
+                         </div>
+                    </div>
+
+
+
+
+
+
+            </div>
+        </div>
+</body>
+</html>
